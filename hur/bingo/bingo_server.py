@@ -28,22 +28,45 @@ def threaded_client(conn, p, gameId):
     reply = ""
     while True:
         try:
-            data = conn.recv(4096).decode()
+            rawdata = conn.recv(4096)
 
+            # print("terima pickle")
+            pidata = pickle.loads(rawdata)
+            # print("selesai pickle")
+
+            if isinstance(pidata, list):
+                data = str(pidata[0][0])
+            else:
+                data = pidata
+                
             if gameId in games:
+                # print("gameId ada")
                 game = games[gameId]
+                print("data: " + data)
+                if data == "table":
+                    print("data == table")
+                    try:
+                        game.setTable(p, pidata[1])
+                    except:
+                        print("game gagal nge set table")
 
                 if not data:
+                    print("data ga ada")
                     break
                 else:
+                    # print("lanjoot")
+
                     if data == "reset":
                         game.resetWent()
-                    elif data == "tabel":
-                        game.setTable()
-                    elif data != "get":
+                    elif data != "get": 
+                        print("Apakah ke sini?")
                         game.play(p, data)
-
-                    conn.sendall(pickle.dumps(game))
+                        
+                    try:
+                        conn.sendall(pickle.dumps(game))
+                        print("berhasil send game ke client")
+                    except:
+                        print("gagal kirim game ke client")
             else:
                 break
         except:

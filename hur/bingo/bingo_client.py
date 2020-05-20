@@ -67,14 +67,26 @@ class Client:
                     self.choice = 0
 
             #kalo belum input tabel
-            if not self.game.tabel:
-                ptable = []
-                for i in range(5):          # A for loop for row entries 
-                    a = [] 
-                    for j in range(5):      # A for loop for column entries 
-                        a.append(int(input())) 
-                    ptable.append(a)
-                
+            if not self.game.tables[self.player]:
+                ptable = ['0', '0', '0', '0', '0',
+                          '0', '0', '0', '0', '0',
+                          '0', '0', '0', '0', '0',
+                          '0', '0', '0', '0', '0',
+                          '0', '0', '0', '0', '0']
+                          
+                for x in range(1, 26):
+                    ngisi = False   #Flag agar bila index yang sudah terpilih tidak terpilih lagi
+                    while ngisi == False :
+                        print("choose table :")
+                        inp = input()
+                        if (int(inp) > -1) and (int(inp) < 25):
+                            if ptable[int(inp)] == '0':
+                                ptable[int(inp)] = str(x)
+                                ngisi = True
+                            else :
+                                print ('Sudah Terisi')
+                        else:
+                            print('Sel itu gaada')
                 try:
                     self.n.sendtable(ptable)
                 except:
@@ -82,17 +94,25 @@ class Client:
                     print("Couldn't send table\n")
                     break
                 
-
             # print("this is choice: ", self.choice)
             # kalo belum ngirim angka tapi tabel udah
             if self.choice == 0 and self.game.connected():
-                print("Input S, P, or R!\n")
+                print("Input your choosen number!\n")
                 self.choice = input()
                 if self.player == 0:
                     if not self.game.p1Went:
                         self.n.send(self.choice)
-                else:
+                elif self.player == 1:
                     if not self.game.p2Went:
+                        self.n.send(self.choice)
+                elif self.player == 2:
+                    if not self.game.p3Went:
+                        self.n.send(self.choice)
+                elif self.player == 3:
+                    if not self.game.p4Went:
+                        self.n.send(self.choice)
+                else:
+                    if not self.game.p5Went:
                         self.n.send(self.choice)
 
             self.redrawWindow()

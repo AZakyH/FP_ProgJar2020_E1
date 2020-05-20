@@ -22,14 +22,21 @@ class Network:
 
     def send(self, data):
         try:
-            self.client.send(str.encode(data))
+            # self.client.send(str.encode(data))
+            self.client.send(pickle.dumps(data))
             return pickle.loads(self.client.recv(2048*2))
         except socket.error as e:
             print(e)
 
-    def sendtable(self, data):
+    def sendtable(self, table):
         try:
-            self.client.send(pickle.dumps(data))
+            # print("masuk sendtable")
+            data = [["table"], table]
+            # print(data[0][0])
+            try:
+                self.client.sendall(pickle.dumps(data))
+            except:
+                print("Couldn't send data")
             return pickle.loads(self.client.recv(2048*2))
         except socket.error as e:
             print(e)
