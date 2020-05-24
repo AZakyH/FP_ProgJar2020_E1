@@ -1,0 +1,62 @@
+WindowManager:
+    LoginWindow:
+    LoadingWindow:
+    MainWindow:
+
+######################################################################################  CSS
+<Button>:
+    font_size: 20
+    size_hint: 0.2, 0.07
+
+<TextInput>:
+    size_hint: 0.2, 0.05
+
+######################################################################################  Login Window
+<LoginWindow>
+    name: "login"
+
+    ip: ip  # Global variable name references the id name
+    username: username # Global variable name references the id name
+
+    canvas:
+        Color: 
+            rgba: (1, 1, 1, 1)
+        Rectangle: 
+            source:'asset/bingologin.jpg'
+            size: root.width, root.height
+            
+        Color: 
+            rgba: (1, 1, 1, 0.94)
+        Rectangle:
+            pos: 255, 140
+            size: root.width/3, root.height/3
+
+    # IP                
+    Label:
+        pos_hint: {"center_x":0.38, "center_y":0.5}
+        markup: True
+        text: "[b][color=181a1c]IP               : [/color][/b]"
+    TextInput:
+        id: ip
+        multiline:False
+        pos_hint: {"center_x":0.54, "center_y":0.5} 
+
+    # Username
+    Label:
+        pos_hint: {"center_x":0.38, "center_y":0.43}
+        markup: True
+        text: "[b][color=181a1c]Username : [/color][/b]"
+    TextInput:
+        id: username
+        multiline:False
+        pos_hint: {"center_x":0.54, "center_y":0.43} 
+
+    Button: 
+        text:"JOIN"
+        background_color: 0.4, 0.5, 0.6, 1
+        pos_hint: {"center_x":0.5, "center_y":0.3} 
+        on_press: 
+            # app.root.current = "second" if passw.text == "tim" else "main"
+            app.root.current = "loading"
+            root.manager.transition.direction = "left"
+            root.joinButton()
