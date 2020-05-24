@@ -1,0 +1,19 @@
+WindowManager:
+    LoginWindow:
+    LoadingWindow:
+    MainWindow:
+
+######################################################################################  Main Window
+<MainWindow>
+    name: "main"
+    canvas:
+        Color: 
+            rgba: (1, 1, 1, 1)
+        Rectangle: 
+            source:'asset/background.jpg'
+            size: root.width, root.height
+            
+    Label:
+        pos_hint: {"center_x":0.5, "center_y":0.5} 
+        markup: True
+        text: "[b][color=181a1c]MAIN[/color][/b]"
