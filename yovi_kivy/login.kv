@@ -1,22 +1,23 @@
 WindowManager:
     LoginWindow:
     LoadingWindow:
+    LoadingtableWindow:
+    MaketableWindow:
     MainWindow:
+    WinWindow:
+    LoseWindow:
 
 ######################################################################################  CSS
-<Button>:
-    font_size: 20
-    size_hint: 0.2, 0.07
-
 <TextInput>:
     size_hint: 0.2, 0.05
 
 ######################################################################################  Login Window
 <LoginWindow>
+
     name: "login"
 
-    ip: ip  # Global variable name references the id name
-    username: username # Global variable name references the id name
+    ip: ip  
+    username: username
 
     canvas:
         Color: 
@@ -51,10 +52,12 @@ WindowManager:
         multiline:False
         pos_hint: {"center_x":0.54, "center_y":0.43} 
 
-    Button: 
+    Button:
         text:"JOIN"
         background_color: 0.4, 0.5, 0.6, 1
-        pos_hint: {"center_x":0.5, "center_y":0.3} 
+        pos_hint: {"center_x":0.5, "center_y":0.3}
+        size_hint: 0.2, 0.07
+        font_size: 20
         on_press: 
             # app.root.current = "second" if passw.text == "tim" else "main"
             app.root.current = "loading"

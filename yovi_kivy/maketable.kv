@@ -1,0 +1,830 @@
+WindowManager:
+    LoginWindow:
+    LoadingWindow:
+    LoadingtableWindow:
+    MaketableWindow:
+    MainWindow:
+    WinWindow:
+    LoseWindow:
+
+######################################################################################  CSS
+<Scatter>:
+    size_hint: None, None
+    size: 63, 55
+    do_rotation: False
+    do_scale: False
+    do_translation: False
+
+######################################################################################  Make Table Window
+<MaketableWindow>
+    name: "maketable"
+    canvas:
+        Color: 
+            rgba: (1, 1, 1, 1)
+        Rectangle: 
+            source:'asset/make_table.jpg'
+            size: root.width, root.height
+            
+    ################################################# Right Holder
+    FloatLayout:
+        Scatter:
+            id: holder_1
+            pos: 494, 386.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_1)
+    
+    FloatLayout:
+        Scatter:
+            id: holder_2
+            pos: 494, 325.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_2)
+
+    FloatLayout:
+        Scatter:
+            id: holder_3
+            pos: 562, 325.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_3)
+    
+    FloatLayout:
+        Scatter:
+            id: holder_4
+            pos: 629, 325.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_4)
+
+    FloatLayout:
+        Scatter:
+            id: holder_5
+            pos: 697, 325.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_5)
+
+    FloatLayout:
+        Scatter:
+            id: holder_6
+            pos: 494, 264.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_6)
+
+    FloatLayout:
+        Scatter:
+            id: holder_7
+            pos: 562, 264.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_7)
+
+    FloatLayout:
+        Scatter:
+            id: holder_8
+            pos: 629, 264.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_8)
+    
+    FloatLayout:
+        Scatter:
+            id: holder_9
+            pos: 697, 264.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_9)
+
+    FloatLayout:
+        Scatter:
+            id: holder_10
+            pos: 494, 204.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_10)
+
+    FloatLayout:
+        Scatter:
+            id: holder_11
+            pos: 562, 204.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_11)
+
+    FloatLayout:
+        Scatter:
+            id: holder_12
+            pos: 629, 204.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_12)
+    
+    FloatLayout:
+        Scatter:
+            id: holder_13
+            pos: 697, 204.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_13)
+
+    FloatLayout:
+        Scatter:
+            id: holder_14
+            pos: 494, 144.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_14)
+
+    FloatLayout:
+        Scatter:
+            id: holder_15
+            pos: 562, 144.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_15)
+
+    FloatLayout:
+        Scatter:
+            id: holder_16
+            pos: 629, 144.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_16)
+    
+    FloatLayout:
+        Scatter:
+            id: holder_17
+            pos: 697, 144.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_17)
+
+    FloatLayout:
+        Scatter:
+            id: holder_18
+            pos: 494, 84.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_18)
+
+    FloatLayout:
+        Scatter:
+            id: holder_19
+            pos: 562, 84.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_19)
+
+    FloatLayout:
+        Scatter:
+            id: holder_20
+            pos: 629, 84.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_20)
+    
+    FloatLayout:
+        Scatter:
+            id: holder_21
+            pos: 697, 84.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_21)
+    
+    FloatLayout:
+        Scatter:
+            id: holder_22
+            pos: 494, 23.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_22)
+
+    FloatLayout:
+        Scatter:
+            id: holder_23
+            pos: 562, 23.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_23)
+
+    FloatLayout:
+        Scatter:
+            id: holder_24
+            pos: 629, 23.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_24)
+    
+    FloatLayout:
+        Scatter:
+            id: holder_25
+            pos: 697, 23.5
+            opacity: 0
+            Label:
+                size: holder_1.size
+                on_touch_down:
+                    root.on_touch_holder("holder", holder_25)
+
+
+    ################################################# Left Holder
+    FloatLayout:
+        Scatter:
+            id: hold_1
+            pos: 68.2, 363
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("1", hold_1)
+
+    FloatLayout:
+        Scatter:
+            id: hold_2
+            pos: 135.8, 363
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("2", hold_2)
+
+    FloatLayout:
+        Scatter:
+            id: hold_3
+            pos: 203.5, 363
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("3", hold_3)
+
+    FloatLayout:
+        Scatter:
+            id: hold_4
+            pos: 271, 363
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("4", hold_4)
+    
+    FloatLayout:
+        Scatter:
+            id: hold_5
+            pos: 339.6, 363
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("5", hold_5)
+
+    FloatLayout:
+        Scatter:
+            id: hold_6
+            pos: 68.2, 302.8
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("6", hold_6)
+    
+    FloatLayout:
+        Scatter:
+            id: hold_7
+            pos: 135.8, 302.8
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("7", hold_7)
+
+    FloatLayout:
+        Scatter:
+            id: hold_8
+            pos: 203.5, 302.8
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("8", hold_8)
+
+    FloatLayout:
+        Scatter:
+            id: hold_9
+            pos: 271, 302.8
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("9", hold_9)
+
+    FloatLayout:
+        Scatter:
+            id: hold_10
+            pos: 339.6, 302.8
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("10", hold_10)
+
+    FloatLayout:
+        Scatter:
+            id: hold_11
+            pos: 68.2, 242.5
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("11", hold_11)
+    
+    FloatLayout:
+        Scatter:
+            id: hold_12
+            pos: 135.8, 242.5
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("12", hold_12)
+
+    FloatLayout:
+        Scatter:
+            id: hold_13
+            pos: 203.5, 242.5
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("13", hold_13)
+
+    FloatLayout:
+        Scatter:
+            id: hold_14
+            pos: 271, 242.5
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("14", hold_14)
+
+    FloatLayout:
+        Scatter:
+            id: hold_15
+            pos: 339.6, 242.5
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("15", hold_15)
+
+    FloatLayout:
+        Scatter:
+            id: hold_16
+            pos: 68.2, 182.5
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("16", hold_16)
+    
+    FloatLayout:
+        Scatter:
+            id: hold_17
+            pos: 135.8, 182.5
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("17", hold_17)
+
+    FloatLayout:
+        Scatter:
+            id: hold_18
+            pos: 203.5, 182.5
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("18", hold_18)
+
+    FloatLayout:
+        Scatter:
+            id: hold_19
+            pos: 271, 182.5
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("19", hold_19)
+
+    FloatLayout:
+        Scatter:
+            id: hold_20
+            pos: 339.6, 182.5
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("20", hold_20)
+    
+    FloatLayout:
+        Scatter:
+            id: hold_21
+            pos: 68.2, 122
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("21", hold_21)
+    
+    FloatLayout:
+        Scatter:
+            id: hold_22
+            pos: 135.8, 122
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("22", hold_22)
+    
+    FloatLayout:
+        Scatter:
+            id: hold_23
+            pos: 203.5, 122
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("23", hold_23)
+    
+    FloatLayout:
+        Scatter:
+            id: hold_24
+            pos: 271, 122
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("24", hold_24)
+    
+    FloatLayout:
+        Scatter:
+            id: hold_25
+            pos: 339.6, 122
+            opacity: 0.01
+            Label:
+                size: hold_1.size
+                on_touch_down:
+                    root.on_touch_holder("25", hold_25)
+
+    ################################################# Box
+    Button:
+        id: box_1
+        text:"1"
+        background_color: 0.4, 0.5, 0.6, 1
+        size_hint: None, None
+        size: 65.5, 57.5
+        font_size: 20
+        pos: holder_1.pos
+        on_press:
+            root.on_touch_box("box", holder_1, box_1)
+
+    Button:
+        id: box_2
+        text:"2"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_2.pos
+        on_press:
+            root.on_touch_box("box", holder_2, box_2)
+
+    Button:
+        id: box_3
+        text:"3"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_3.pos
+        on_press:
+            root.on_touch_box("box", holder_3, box_3)
+    
+    Button:
+        id: box_4
+        text:"4"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_4.pos
+        on_press:
+            root.on_touch_box("box", holder_4, box_4)
+
+    Button:
+        id: box_5
+        text:"5"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_5.pos
+        on_press:
+            root.on_touch_box("box", holder_5, box_5)
+
+    Button:
+        id: box_6
+        text:"6"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_6.pos
+        on_press:
+            root.on_touch_box("box", holder_6, box_6)
+
+    Button:
+        id: box_7
+        text:"7"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_7.pos
+        on_press:
+            root.on_touch_box("box", holder_7, box_7)
+
+    Button:
+        id: box_8
+        text:"8"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_8.pos
+        on_press:
+            root.on_touch_box("box", holder_8, box_8)
+
+    Button:
+        id: box_9
+        text:"9"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_9.pos
+        on_press:
+            root.on_touch_box("box", holder_9, box_9)
+
+    Button:
+        id: box_10
+        text:"10"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_10.pos
+        on_press:
+            root.on_touch_box("box", holder_10, box_10)
+
+    Button:
+        id: box_11
+        text:"11"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_11.pos
+        on_press:
+            root.on_touch_box("box", holder_11, box_11)
+
+    Button:
+        id: box_12
+        text:"12"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_12.pos
+        on_press:
+            root.on_touch_box("box", holder_12, box_12)
+
+    Button:
+        id: box_13
+        text:"13"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_13.pos
+        on_press:
+            root.on_touch_box("box", holder_13, box_13)
+
+    Button:
+        id: box_14
+        text:"14"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_14.pos
+        on_press:
+            root.on_touch_box("box", holder_14, box_14)
+
+    Button:
+        id: box_15
+        text:"15"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_15.pos
+        on_press:
+            root.on_touch_box("box", holder_15, box_15)
+
+    Button:
+        id: box_16
+        text:"16"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_16.pos
+        on_press:
+            root.on_touch_box("box", holder_16, box_16)
+
+    Button:
+        id: box_17
+        text:"17"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_17.pos
+        on_press:
+            root.on_touch_box("box", holder_17, box_17)
+
+    Button:
+        id: box_18
+        text:"18"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_18.pos
+        on_press:
+            root.on_touch_box("box", holder_18, box_18)
+
+    Button:
+        id: box_19
+        text:"19"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_19.pos
+        on_press:
+            root.on_touch_box("box", holder_19, box_19)
+
+    Button:
+        id: box_20
+        text:"20"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_20.pos
+        on_press:
+            root.on_touch_box("box", holder_20, box_20)
+
+    Button:
+        id: box_21
+        text:"21"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_21.pos
+        on_press:
+            root.on_touch_box("box", holder_21, box_21)
+
+    Button:
+        id: box_22
+        text:"22"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_22.pos
+        on_press:
+            root.on_touch_box("box", holder_22, box_22)
+
+    Button:
+        id: box_23
+        text:"23"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_23.pos
+        on_press:
+            root.on_touch_box("box", holder_23, box_23)
+
+    Button:
+        id: box_24
+        text:"24"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_24.pos
+        on_press:
+            root.on_touch_box("box", holder_24, box_24)
+
+    Button:
+        id: box_25
+        text:"25"
+        background_color: box_1.background_color
+        size_hint: None, None
+        size: box_1.size
+        font_size: box_1.font_size
+        pos: holder_25.pos
+        on_press:
+            root.on_touch_box("box", holder_25, box_25)
+
+    Button: 
+        text:"PLAY"
+        background_color: 0.1, 0.5, 1, 1
+        pos: 50, 30
+        size_hint: 0.2, 0.07
+        font_size: 20
+        on_press: 
+            # app.root.current = "second" if passw.text == "tim" else "main"
+            root.table_done()
+            app.root.current = "loadingtable"
+            root.manager.transition.direction = "left"
+
+    Button: 
+        text:"RANDOM"
+        background_color: 0.1, 0.5, 1, 1
+        pos: 250, 30
+        size_hint: 0.2, 0.07
+        font_size: 20
+        on_press: 
+            # app.root.current = "second" if passw.text == "tim" else "main"
+            root.on_touch_random()
+            root.table_done()
+            app.root.current = "loadingtable"
+            root.manager.transition.direction = "left"
